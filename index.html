@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hide password</title>
+    <style>
+  div{
+    width: 700px;
+            padding: 30px;
+            margin: 250px auto;
+            box-shadow: 0 0 15px blue;
+            background-color: white;
+  }
+  div:hover{
+      background-color: lightblue;
+  }
+  input,label,button{
+      border-radius: 25px;
+      background-color: pink;
+      padding: 10px;
+      margin: 10px;
+      box-shadow: 0 0 10px blue;
+  }
+  h2:hover{
+      color:green;
+  }
+    </style>
+</head>
+<body bgcolor="coral">
+    <div id="pass">
+        <h2>Show/Hide password(double click to hide the password again)</h2>
+        <label for="">Enter password</label>
+        <input type="password" name="" id="P">
+        <button onclick="fn()" ondblclick="f()" id="e">Show password</button>
+    </div>
+    <script>
+        function fn() {
+            var getPass=document.getElementById('P');
+           var e= document.querySelector('#e')
+            getPass.innerText="Hide password"
+           getPass.type="text";
+           e.innerText="hide password";
+        }
+        function f(){
+            var Q=document.getElementById('P');
+
+            Q.innerText="show password";
+            Q.type="password";
+            var e= document.querySelector('#e')
+            e.innerText="show password";
+
+        }
+    </script>
+    
+</body>
+</html>
